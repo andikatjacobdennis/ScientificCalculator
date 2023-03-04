@@ -37,18 +37,18 @@ catch (Exception e)
 }
 ```
 
-Installation
+## Installation
 To use the scientific calculator in your C# project, you can add the ShuntingYardAlgorithm.cs file to your project and include it in your code. Alternatively, you can compile the ShuntingYardAlgorithm.cs file into a separate DLL and reference it in your project.
 
-Testing
+## Testing
 This project includes a test project ScientificCalculatorTests that contains unit tests for the ShuntingYardAlgorithm class. You can run the tests using a testing framework such as MSTest or NUnit. For example, to run the tests using MSTest, you can use the following command:
 
 ```bash
 dotnet test ScientificCalculatorTests
 ```
 
-Contributing
+## Contributing
 Contributions to this project are welcome! If you find a bug, have a suggestion, or want to add a new feature, please open an issue or submit a pull request. Before submitting a pull request, please make sure that all tests pass and that the code follows the project's coding conventions.
 
-License
+## License
 This project is licensed under the MIT License. See the LICENSE file for details.
