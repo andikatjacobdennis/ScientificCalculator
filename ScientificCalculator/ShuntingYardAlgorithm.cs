@@ -289,14 +289,15 @@ namespace ScientificCalculator
 
         static HashSet<string> functions = new HashSet<string>()
         {
-            "sin", "cos", "tan"
+            "sin", "cos", "tan", "sqrt"
         };
 
         static Dictionary<string, Func<double, double>> functionMap = new Dictionary<string, Func<double, double>>()
         {
             { "sin", x => Math.Sin(x) },
             { "cos", x => Math.Cos(x) },
-            { "tan", x => Math.Tan(x) }
+            { "tan", x => Math.Tan(x) },
+            { "sqrt", x => Math.Sqrt(x) }
         };
 
         class OperatorInfo
