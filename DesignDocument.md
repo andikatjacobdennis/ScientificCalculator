@@ -4,7 +4,8 @@
 The Scientific Calculator is a software application that allows users to perform mathematical calculations with a variety of functions and operations. The purpose of this document is to provide a high-level overview of the design of the calculator and to describe the key features and functionalities of the application.
 
 ## Design Overview
-The Scientific Calculator is designed as a modular and extensible application that can be easily customized and enhanced with new features and functions. The calculator is built on top of the Shunting Yard Algorithm, which is a widely used method for parsing and evaluating mathematical expressions.
+The Scientific Calculator is designed as a modular and extensible application that can be easily customized and enhanced with new features and functions.
+The calculator is built on top of the Shunting Yard Algorithm, which is a widely used method for parsing and evaluating mathematical expressions.
 
 The calculator is divided into three main modules:
 
@@ -27,10 +28,11 @@ Menus: The calculator includes a variety of menus that users can use to customiz
 
 ## Shunting Yard Algorithm
 The Shunting Yard Algorithm module is the heart of the Scientific Calculator, providing the core functionality for parsing and evaluating mathematical expressions. The module is implemented as a C# class called ShuntingYardAlgorithm, which includes the following key methods:
-
+[<img src="activityDiagramShuntingYard.png">]
 - Parse: The Parse method takes a string containing a mathematical expression and converts it into a series of tokens that can be processed by the algorithm.
-
+[<img src="activityDiagramTokenize.png">]
 - Evaluate: The Evaluate method takes a series of tokens and uses the Shunting Yard Algorithm to evaluate the mathematical expression and return the result.
+[<img src="activityDiagramEvaluate.png">]
 
 ## Math Functions
 The Math Functions module provides a collection of built-in mathematical functions that users can use in their calculations. The functions are implemented as C# methods that can be easily extended or customized to add new functions. The module includes the following functions:
