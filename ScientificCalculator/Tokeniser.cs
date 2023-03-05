@@ -10,6 +10,10 @@ namespace ScientificCalculator
         {
             "sin", "cos", "tan", "asin", "acos", "atan", "fact"
         };
+        List<string> Constants = new List<string>()
+        {
+            "pi"
+        };
         public List<Token> GetTokensInInfixNotation(string mathExpression)
         {
             List<Token> tokensInInfixNotation = new List<Token>();
@@ -69,6 +73,10 @@ namespace ScientificCalculator
                 else if (Methods.Any(x => string.Equals(x, buffer)))
                 {
                     AddToken(tokensInInfixNotation, TokenType.Method, buffer);
+                }
+                else if (Constants.Any(x => string.Equals(x, buffer)))
+                {
+                    AddToken(tokensInInfixNotation, TokenType.Constant, buffer);
                 }
                 else
                 {

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ScientificCalculator
 {
@@ -14,7 +10,7 @@ namespace ScientificCalculator
             Console.Title = "Scientific Calculator";
 
             // Display welcome message
-            Console.BackgroundColor= ConsoleColor.Black;
+            Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("==============================================================");
             Console.WriteLine("||            Welcome to the Scientific Calculator          ||");

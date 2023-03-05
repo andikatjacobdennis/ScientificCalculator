@@ -5,7 +5,7 @@ namespace ScientificCalculator
 {
     public class PostfixEvaluator
     {
-        public static double Evaluate(List<Token> tokensInPostfixNotation)
+        public double Evaluate(List<Token> tokensInPostfixNotation)
         {
             Stack<double> operands = new Stack<double>();
 
@@ -13,6 +13,9 @@ namespace ScientificCalculator
             {
                 switch (token.tokenType)
                 {
+                    case TokenType.Constant:
+                        operands.Push(GetConstant(token.Value));
+                        break;
                     case TokenType.Number:
                         operands.Push(Convert.ToDouble(token.Value));
                         break;
@@ -37,7 +40,23 @@ namespace ScientificCalculator
             return operands.Pop();
         }
 
-        private static double PerformOperation(string operatorSymbol, double operand1, double operand2)
+        private double GetConstant(dynamic value)
+        {
+            double result;
+
+            if (string.Equals("pi", value))
+            {
+                result = Math.PI;
+            }
+            else
+            {
+                throw new ArgumentException($"Invalid constant: {value}");
+            }
+
+            return result;
+        }
+
+        private double PerformOperation(string operatorSymbol, double operand1, double operand2)
         {
             switch (operatorSymbol)
             {
@@ -62,7 +81,7 @@ namespace ScientificCalculator
             }
         }
 
-        private static double PerformMethod(string methodName, double argument)
+        private double PerformMethod(string methodName, double argument)
         {
             switch (methodName)
             {

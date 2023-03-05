@@ -21,7 +21,8 @@ namespace ScientificCalculator
             Console.WriteLine("Postfix => " + postfixTokens.Aggregate((i, j) => new Token { Value = i.Value + ", " + j.Value }).Value);
 
             // Do the evaluation here
-            result = PostfixEvaluator.Evaluate(postfixTokens);
+            PostfixEvaluator postfixEvaluator = new PostfixEvaluator();
+            result = postfixEvaluator.Evaluate(postfixTokens);
 
             return result;
         }

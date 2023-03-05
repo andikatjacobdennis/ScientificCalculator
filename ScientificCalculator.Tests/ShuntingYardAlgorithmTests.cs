@@ -48,7 +48,7 @@ namespace ScientificCalculator.Tests
             Assert.AreEqual(-5, mathEvaluator.Evaluate("-5"));
 
             // Test parentheses
-            Assert.AreEqual(14, mathEvaluator.Evaluate("(2 + 3) * 4"));
+            Assert.AreEqual(20, mathEvaluator.Evaluate("(2 + 3) * 4"));
 
             // Test pi constant
             Assert.AreEqual(Math.PI * 2, mathEvaluator.Evaluate("pi * 2"));
@@ -60,7 +60,7 @@ namespace ScientificCalculator.Tests
             Assert.ThrowsException<ArgumentException>(() => mathEvaluator.Evaluate("sqrt(2)"));
 
             // Test invalid expression
-            Assert.ThrowsException<ArgumentException>(() => mathEvaluator.Evaluate("2 + * 3"));
+            Assert.ThrowsException<InvalidOperationException>(() => mathEvaluator.Evaluate("2 + * 3"));
         }
     }
 }
