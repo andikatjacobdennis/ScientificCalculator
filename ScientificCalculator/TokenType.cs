@@ -7,7 +7,6 @@
         Operator,
         Constant,
         Method,
-        OperatorUnary,
-        Variable
+        OperatorUnary
     }
 }

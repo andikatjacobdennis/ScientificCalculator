@@ -10,13 +10,16 @@ namespace ScientificCalculator
     {
         static void Main()
         {
+            // Update title
+            Console.Title = "Scientific Calculator";
+
             // Display welcome message
             Console.BackgroundColor= ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("==============================================================");
             Console.WriteLine("||            Welcome to the Scientific Calculator          ||");
             Console.WriteLine("==============================================================\n");
-            Console.WriteLine("1. This program can evaluate arithmetic, trigonometric, and bracketed expressions.");
+            Console.WriteLine("1. This program can evaluate arithmetic, trigonometric, and bracketed expressions.\r\n");
             Console.WriteLine("2. Sample usage: sin(2*(3+4))-1");
 
             Console.WriteLine("\n******** FOR EDUCATIONAL PURPOSE ONLY. USE AT YOUR OWN RISK ********");
