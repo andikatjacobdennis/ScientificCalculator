@@ -13,11 +13,13 @@ namespace ScientificCalculator
             // Display welcome message
             Console.BackgroundColor= ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("===========================================================");
-            Console.WriteLine("||            Welcome to the Scientific Calculator       ||");
-            Console.WriteLine("===========================================================\n");
+            Console.WriteLine("==============================================================");
+            Console.WriteLine("||            Welcome to the Scientific Calculator          ||");
+            Console.WriteLine("==============================================================\n");
             Console.WriteLine("1. This program can evaluate arithmetic, trigonometric, and bracketed expressions.");
             Console.WriteLine("2. Sample usage: sin(2*(3+4))-1");
+
+            Console.WriteLine("\n******** FOR EDUCATIONAL PURPOSE ONLY. USE AT YOUR OWN RISK ********");
 
             while (true)
             {
@@ -37,8 +39,8 @@ namespace ScientificCalculator
                 try
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
-                    ShuntingYardAlgorithm shuntingYardAlgorithm = new ShuntingYardAlgorithm();
-                    double result = shuntingYardAlgorithm.Evaluate(mathExpression);
+                    MathExpressionEvaluator mathEvaluator = new MathExpressionEvaluator();
+                    double result = mathEvaluator.Evaluate(mathExpression);
                     Console.WriteLine($"Result: {result}\n");
                 }
                 catch (Exception ex)
