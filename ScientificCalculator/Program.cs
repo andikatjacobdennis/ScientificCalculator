@@ -4,6 +4,15 @@ namespace ScientificCalculator
 {
     class Program
     {
+        /// <summary>
+        /// This is a C# program for a scientific calculator. 
+        /// It starts by displaying a welcome message and some information about the program. 
+        /// It then enters a loop where it prompts the user to enter a math expression to evaluate. 
+        /// The program uses a MathExpressionEvaluator class to evaluate the expression and prints the result to the console. 
+        /// If an error occurs during the evaluation, it catches the exception and prints an error message to the console. 
+        /// The program continues to prompt the user for expressions until the user types "no". 
+        /// Finally, it displays a closing message and waits for the user to press any key before exiting.
+        /// </summary>
         static void Main()
         {
             // Update title
