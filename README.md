@@ -14,9 +14,7 @@ When you run the program, it will display a welcome message and some information
 
 ## Sample usage:
 
-```csharp
-sin(2*(3+4))-1+pi
-```
+<img src="Screenshot.png" />
 
 The program will evaluate the expression and display the result. If an error occurs during evaluation, the program will catch the exception and display an error message.
 
