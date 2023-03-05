@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ScientificCalculator
 {
@@ -12,6 +13,7 @@ namespace ScientificCalculator
 
             // Convert infix to postfix notation using the Shunting Yard Algorithm
             List<string> postfix = ShuntingYard(tokens);
+            Console.WriteLine("postfix => " + string.Join(string.Empty, postfix));
 
             // Evaluate the postfix expression
             Stack<double> stack = new Stack<double>();
