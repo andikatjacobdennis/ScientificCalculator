@@ -1,54 +1,36 @@
-# C# Scientific Calculator
+# Scientific Calculator
+The Scientific Calculator is a C# console application that allows users to evaluate mathematical expressions containing arithmetic, trigonometric functions, constants, and bracketed expressions.
 
-This project is a C# scientific calculator that uses the Shunting Yard Algorithm to parse and evaluate mathematical expressions. The calculator supports the following operations and functions:
-
-- Parentheses
-- Addition
-- Subtraction
-- Multiplication
-- Division
-- Exponentiation
-- Unary operations (for negative numbers)
-- The sin function
-- The cos function
-- The tan function
-- The pi constant
-
-## Usage
-
-To use the scientific calculator, you can create a new instance of the `ShuntingYardAlgorithm` class and call its `Evaluate` method with a string containing a mathematical expression. For example:
-
-```csharp
-double result = ShuntingYardAlgorithm.Evaluate("2 + 3 * 4");
-Console.WriteLine(result); // Output: 14
-```
-
-If the input expression is invalid or contains errors, the Evaluate method throws an exception. You can catch the exception and handle the error as appropriate. For example:
-
-```csharp
-try
-{
-    double result = ShuntingYardAlgorithm.Evaluate("2 + * 3");
-    Console.WriteLine(result);
-}
-catch (Exception e)
-{
-    Console.WriteLine("Error: " + e.Message);
-}
-```
+## Getting Started
+Prerequisites
+To run this program, you need to have .NET Framework 4.7.2 installed on your computer. You can download and install the latest version of .NET Framework from the official website https://dotnet.microsoft.com/download/dotnet-framework.
 
 ## Installation
-To use the scientific calculator in your C# project, you can add the ShuntingYardAlgorithm.cs file to your project and include it in your code. Alternatively, you can compile the ShuntingYardAlgorithm.cs file into a separate DLL and reference it in your project.
+Clone this repository to your local machine.
+Open the ScientificCalculator folder in a terminal or command prompt.
+Run the command dotnet run to start the program.
+Usage
+When you run the program, it will display a welcome message and some information about the program. You will then be prompted to enter a mathematical expression to evaluate. The program can evaluate expressions containing arithmetic operations such as addition, subtraction, multiplication, and division, as well as trigonometric functions such as sin, cos, and tan, and constants such as pi.
 
-## Testing
-This project includes a test project ScientificCalculatorTests that contains unit tests for the ShuntingYardAlgorithm class. You can run the tests using a testing framework such as MSTest or NUnit. For example, to run the tests using MSTest, you can use the following command:
+## Sample usage:
 
-```bash
-dotnet test ScientificCalculatorTests
+```csharp
+sin(2*(3+4))-1+pi
 ```
 
-## Contributing
-Contributions to this project are welcome! If you find a bug, have a suggestion, or want to add a new feature, please open an issue or submit a pull request. Before submitting a pull request, please make sure that all tests pass and that the code follows the project's coding conventions.
+The program will evaluate the expression and display the result. If an error occurs during evaluation, the program will catch the exception and display an error message.
+
+To exit the program, type "no" when prompted to enter an expression.
+
+## Note:
+This program is for educational purposes only. Use it at your own risk.
+
+## Built With
+- C#
+- .NET Framework 4.7.2
+
+## Author
+Andikat Jacob Dennis
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
