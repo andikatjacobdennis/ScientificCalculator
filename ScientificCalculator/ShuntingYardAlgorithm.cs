@@ -10,6 +10,7 @@ namespace ScientificCalculator
         {
             // Tokenize the expression
             List<string> tokens = Tokenize(expression);
+            Console.WriteLine("infix => " + string.Join(", ", tokens));
 
             // Convert infix to postfix notation using the Shunting Yard Algorithm
             List<string> postfix = ShuntingYard(tokens);
@@ -68,7 +69,8 @@ namespace ScientificCalculator
         static List<string> Tokenize(string expression)
         {
             List<string> tokens = new List<string>();
-            string buffer = "";
+            string buffer = string.Empty;
+            bool isMinusOperator = false;
 
             for (int i = 0; i < expression.Length; i++)
             {
@@ -85,10 +87,32 @@ namespace ScientificCalculator
                     // of tokens and add the operator or parenthesis as a separate token
                     if (buffer != "")
                     {
-                        tokens.Add(buffer);
+                        if (isMinusOperator)
+                        {
+                            if(IsNumber(buffer))
+                                tokens.Add("-" + buffer);
+                            else
+                            {
+                                if(tokens.Any() && !IsParenthesis(tokens.Last()))
+                                    tokens.Add("+");
+                                tokens.Add("-1");
+                                tokens.Add("*");
+                                tokens.Add(buffer);
+                            }
+                            isMinusOperator = false;
+                        }
+                        else
+                            tokens.Add(buffer);
                         buffer = "";
                     }
-                    tokens.Add(c.ToString());
+                    if (c == '-')
+                    {
+                        isMinusOperator = true;
+                    }
+                    else
+                    {
+                        tokens.Add(c.ToString());
+                    }
                 }
                 else if (char.IsLetter(c))
                 {
@@ -126,7 +150,14 @@ namespace ScientificCalculator
             // Add the final buffer to the list of tokens
             if (buffer != "")
             {
-                tokens.Add(buffer);
+                if(isMinusOperator)
+                {
+                    if(tokens.Any())
+                        tokens.Add("+");
+                    tokens.Add("-" + buffer);
+                }
+                else
+                    tokens.Add(buffer);
             }
 
             return tokens;

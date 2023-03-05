@@ -35,6 +35,15 @@ namespace ScientificCalculator.Tests
             // Test tan function
             Assert.AreEqual(Math.Tan(Math.PI / 4), shuntingYardAlgorithm.Evaluate("tan(pi / 4)"));
 
+            // Test signed sin function
+            Assert.AreEqual(-Math.Sin(Math.PI / 2), shuntingYardAlgorithm.Evaluate("-sin(pi / 2)"));
+
+            // Test signed cos function
+            Assert.AreEqual(-Math.Cos(Math.PI / 2), shuntingYardAlgorithm.Evaluate("-cos(pi / 2)"));
+
+            // Test signed tan function
+            Assert.AreEqual(-Math.Tan(Math.PI / 4), shuntingYardAlgorithm.Evaluate("-tan(pi / 4)"));
+
             // Test negative number
             Assert.AreEqual(-5, shuntingYardAlgorithm.Evaluate("-5"));
 
