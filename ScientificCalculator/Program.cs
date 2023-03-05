@@ -11,17 +11,20 @@ namespace ScientificCalculator
         static void Main()
         {
             // Display welcome message
+            Console.BackgroundColor= ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("===========================================================");
             Console.WriteLine("||            Welcome to the Scientific Calculator       ||");
             Console.WriteLine("===========================================================\n");
-            Console.WriteLine("This program can evaluate arithmetic, trigonometric, and bracketed expressions.\n");
-            Console.WriteLine("Sample usage: sin(2*(3+4))-1");
+            Console.WriteLine("1. This program can evaluate arithmetic, trigonometric, and bracketed expressions.");
+            Console.WriteLine("2. Sample usage: sin(2*(3+4))-1");
+
             while (true)
             {
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 // Get the math expression from the user
                 Console.Write("\nPlease enter the math expression (or type \"no\" to exit): ");
+                Console.ForegroundColor = ConsoleColor.White;
                 string mathExpression = Console.ReadLine();
 
                 // Exit the loop if the user types "no"
